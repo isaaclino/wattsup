@@ -169,14 +169,14 @@ def main(args):
             args.port = '/dev/tty.usbserial-A1000wT3'
         elif system == 'Linux':
 	    #add more port here
-	    args.port = '/dev/ttyUSB0'
+	    args.port = '/dev/ttyUSB2'
     if not os.path.exists(args.port):
         if not args.sim:
             print ''
             print 'Serial port %s does not exist.' % args.port
             print 'Please make sure FDTI drivers are installed'
             print ' (http://www.ftdichip.com/Drivers/VCP.htm)'
-            print 'Default ports are /dev/ttyUSB0 for Linux'
+            print 'Default ports are /dev/ttyUSB2 for Linux'
             print ' and /dev/tty.usbserial-A1000wT3 for Mac OS X'
             exit()
         else:
@@ -201,7 +201,7 @@ if __name__ == '__main__':
     parser.add_argument('-g', '--graphics-mode', dest='plot', action='store_true', help='Graphical output: plot the data in real time')
     parser.add_argument('-l', '--log', dest='log', action='store_true', help='log data in real time')
     parser.add_argument('-r', '--raw', dest='raw', action='store_true', help='output raw file')
-    parser.add_argument('-o', '--outfile', dest='outfile', default='log.out', help='Output file')
+    parser.add_argument('-o', '--outfile', dest='outfile', default='log2.out', help='Output file')
     parser.add_argument('-s', '--sample-interval', dest='interval', default=1.0, type=float, help='Sample interval (default 1 s)')
     parser.add_argument('-p', '--port', dest='port', default=None, help='USB serial port')
     args = parser.parse_args()
