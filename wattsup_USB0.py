@@ -201,7 +201,7 @@ if __name__ == '__main__':
     parser.add_argument('-g', '--graphics-mode', dest='plot', action='store_true', help='Graphical output: plot the data in real time')
     parser.add_argument('-l', '--log', dest='log', action='store_true', help='log data in real time')
     parser.add_argument('-r', '--raw', dest='raw', action='store_true', help='output raw file')
-    parser.add_argument('-o', '--outfile', dest='outfile', default='log.out', help='Output file')
+    parser.add_argument('-o', '--outfile', dest='outfile', default='log0.out', help='Output file')
     parser.add_argument('-s', '--sample-interval', dest='interval', default=1.0, type=float, help='Sample interval (default 1 s)')
     parser.add_argument('-p', '--port', dest='port', default=None, help='USB serial port')
     args = parser.parse_args()
