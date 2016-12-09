@@ -1,7 +1,13 @@
 # It will run 4 wattsup scripts at the same time
 
-import os
-print "running Watts Up? pro on USB001 and USB002"
-os.system("python wattsup_USB0.py -l & python wattsup_USB1.py")
-#print "running Watts Up? pro on USB002"
-#os.system("python wattsup_USB1.py -l")
+import multiprocessing
+
+def worker(file):
+
+#add more wattsup_USB0.py after been created
+
+if __name__ == '__main__':
+    files = ["wattsup_USB0.py","wattsup_USB1.py","wattsup_USB2.py","wattsup_USB3.py"]
+    for i in files:
+        p = multiprocessing.Process(target=worker(i))
+        p.start()
