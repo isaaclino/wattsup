@@ -1,4 +1,15 @@
+##! /bin/bash
+#
+#python wattsup_USB0.py &
+#python wattsup_USB1.py &
+#python wattsup_USB2.py &
+#python wattsup_USB3.py &
+
+
+
 # It will run 4 wattsup scripts at the same time
+
+
 
 import multiprocessing
 
